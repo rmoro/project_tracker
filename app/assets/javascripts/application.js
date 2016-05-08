@@ -13,4 +13,16 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+  //= require_tree .
+  var populatePre;
+
+  populatePre = function(url, type) {
+    var xhr;
+    xhr = new XMLHttpRequest();
+    xhr.onload = function() {
+      return document.getElementById(type).textContent = this.responseText;
+    };
+    xhr.open('GET', url);
+    xhr.send;
+    return true;
+  };

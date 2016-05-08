@@ -2,19 +2,17 @@
 <head><title>CP317</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
 <script>
-function populatePre(url, type) {
-    var xhr = new XMLHttpRequest();
-    xhr.onload = function () {
-        document.getElementById(type).textContent = this.responseText;
-    };
-    xhr.open('GET', url);
-    xhr.send();
-}
-function sug_update(){
-    populatePre('suggestions.txt',"sugs");
-}
-sug_update();
-populatePre('class_list.txt', "contents");
+populatePre = function(url, type) {
+  var xhr;
+  xhr = new XMLHttpRequest();
+  xhr.onload = function() {
+    return document.getElementById(type).textContent = this.responseText;
+  };
+  xhr.open('GET', url);
+  xhr.send;
+  return true;
+};
+populatePre('class_list.txt', "c-list");
 </script>
 </head> 
 
@@ -112,6 +110,6 @@ the page easier for users to navigate and stops the user from having to learn an
 </p>    <a class="anchor" name="2.0"></a>
 <a class="anchor" name="3.0"></a>
 <h3>2.0 Class List:</h3> 
-<pre id="contents"></pre>
+<pre id="c-list"></pre>
 </body>
 </html>

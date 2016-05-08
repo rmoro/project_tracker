@@ -19,7 +19,7 @@
   <div class="container">
 	  <br>
   	
-    <% @entries.each do |entry| %> 
+    <% @entries.reverse.each do |entry| %> 
     <%= link_to 'Post Your Work', "/entries/new" %>
 <div class="message"> 
   <p class="name" >
