@@ -1,22 +1,14 @@
-<DOCTYPE! HTML5>
-<head><title>CP317</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
 <script>
-var populatePre;
-populatePre = function(url, type) {
-  var xhr;
-  xhr = new XMLHttpRequest();
-  xhr.onload = function() {
-    return document.getElementById(type).textContent = this.responseText;
-  };
-  xhr.open('GET', url);
-  xhr.send;
+function populatePre(url) {
+    var xhr = new XMLHttpRequest();
+    xhr.onload = function () {
+        document.getElementById('contents').textContent = this.responseText;
+    };
+    xhr.open('GET', url);
+    xhr.send();
 }
-populatePre("http://morouney.com/class_list.txt", "clist");
+populatePre('class_list.txt');
 </script>
-</head> 
-
-<body>
 	<div id="title" class="header-cont" border="0px" width="100%">
           <p align="right">
 			<a href="/cp317/#1.0">UPOD</a> :: 
@@ -29,7 +21,7 @@ populatePre("http://morouney.com/class_list.txt", "clist");
 		  </p>
 	      </div>
     <div id="wrapper" class="header-cont2" border="0px" width="100%">
-	<img src="/phys1.jpg" width="100%" height="250px" border-bottom="solid #000000">
+	<img src="phys1.jpg" width="100%" height="250px" border-bottom="solid #000000">
 	</div>
 	</div>
 <a class="anchor" name="1.0"></a>
@@ -95,7 +87,7 @@ and underlined became the standard and it is what we are now used to. Using stan
 the page easier for users to navigate and stops the user from having to learn anything form using the page.
 <br><br><a class="anchor" name="1.2"></a>
     <h3>1.2 Github</h3>
-    <a href="https://github.com/rmoro/UPOD"><img src="/git.jpg" width="100%" /></a>
+    <a href="https://github.com/rmoro/UPOD"><img src="git.jpg" width="100%" /></a>
     <p> Kieran has provided some great tutorials on git for those who are not familiar with the system:
     <br/><a href="https://www.youtube.com/watch?v=Y9XZQO1n_7c" target="_parent">Learn Git in 20 Minutes</a>
     <br/><a href="https://www.codecademy.com/learn/learn-git" target="_parent">Interactive Tutorial on Git</a>
@@ -105,11 +97,11 @@ the page easier for users to navigate and stops the user from having to learn an
     <br/><br/> Since most people gave emails which aren't linked to github accounts, I will add contributors for anyone that deos a pull request. This should make my life easier. If you don't know how to pull yet don't worry! Just go sign up for a github account and we will teach you the rest.</p>
     <a class="anchor" name="1.3"></a>    
 <h3>1.3 Facebook Group</h3>
-<a href="https://www.facebook.com/groups/669296119875892/"><img src="/fb.jpg" width="100%"/></a>
+<a href="https://www.facebook.com/groups/669296119875892/"><img src="fb.jpg" width="100%"/></a>
 <p>Qamar Farooq was kind enough to create a facebook group for everyone to join. You can access it at https://www.facebook.com/groups/669296119875892/ or by <a href="https://www.facebook.com/groups/669296119875892/" target="_parent">clicking here</a>
 </p>    <a class="anchor" name="2.0"></a>
 <a class="anchor" name="3.0"></a>
 <h3>2.0 Class List:</h3> 
-<pre id="clist"></pre>
+<pre id="contents"></pre>
 </body>
 </html>
