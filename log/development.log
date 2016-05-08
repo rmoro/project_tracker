@@ -13336,3 +13336,16 @@ Processing by EntrysController#index as HTML
   [1m[36mEntry Load (0.1ms)[0m  [1mSELECT "entries".* FROM "entries"[0m
   Rendered entrys/index.html.erb within layouts/application (1.4ms)
 Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-05-08 17:07:41 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 329ms (Views: 310.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cp317" for ::1 at 2016-05-08 17:07:42 -0400
+Processing by Cp317Controller#index as HTML
+  Rendered cp317/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms)
