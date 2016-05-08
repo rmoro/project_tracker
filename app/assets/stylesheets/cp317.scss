@@ -1,3 +1,112 @@
 // Place all the styles related to the cp317 controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+a:link, a:visited
+{
+	color: white;
+	padding: 3px 5px;
+	text-decoration: none;
+	display: inline-block;
+}
+
+a:hover, a:active 
+{
+	color: #dedc72
+}
+
+h1 
+{
+	color: #dedc72;
+	font-size:18px;
+	padding: 8px;
+	font-family: Impact, Charcoal, sans-serif;
+}
+
+h3 
+{
+	color: #dedc72;
+	font-size:28px;
+	padding: 0px;
+}
+h3
+{
+	color: #dedc72;
+	font-size:24px;
+	padding: 0px;
+}
+body 
+{
+	background: #435464;
+	text-align: justify;
+	color: #d5e3fa;
+	font-family: Helvetica;
+	font-size: 16px;
+	margin:"0px";
+}
+
+
+.divtext 
+{
+    word-wrap: break-word;
+	width: 70%;
+	margin-top: 290px;
+	margin-left: 150px;
+}	
+
+.title
+{
+	width: 70%;
+	margin-left: 150px;
+	position:fixed;
+	background: #435464;
+    margin-top:0px;
+}
+
+pre 
+{
+	display: inline-block;
+	white-space: -moz-pre-wrap; /* Firefox */
+	white-space: -pre-wrap; /* ancient Opera */
+	white-space: -o-pre-wrap; /* newer Opera */
+	white-space: pre-wrap; /* Chrome; W3C standard */
+	word-wrap: break-word; /* IE */
+}
+div.header-cont 
+{
+	width: 100%;
+	margin-left: 0px;
+	/*position:fixed;*/
+	top:0px;
+	background-color:#000000;
+	border:"0px";
+	padding:"0px";
+  align: center;
+}
+div.header-cont2 
+{
+	width: 70%;
+	margin-left: 150px;
+	top:24px;
+	background-color:#435464;
+	border:"0px";
+	padding:"0px";
+}
+.stretch
+{
+	top:"0px";
+	position:"fixed";
+	border:"0px";
+	padding:"0px";
+	width:"100%";
+	padding-left:"0px";
+	margin:"0px";
+}
+a.anchor {
+    display: block;
+    position: relative;
+    top: -290px;
+    visibility: hidden;
+}

@@ -1,3 +1,6 @@
+// Place all the styles related to the cp317 controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
@@ -49,13 +52,14 @@ body
 {
     word-wrap: break-word;
 	width: 70%;
-	margin-top: 290px;
+	margin-top: 10px;
 	margin-left: 150px;
 }	
 
 .title
 {
-	width:100%;
+	width: 70%;
+	margin-left: 150px;
 	position:fixed;
 	background: #435464;
     margin-top:0px;
@@ -72,25 +76,36 @@ pre
 }
 div.header-cont 
 {
-	width:100%;
+	width: 100%;
+	margin-left: 0px;
 	position:fixed;
 	top:0px;
-	left:0px;
-	margin-left:0px;
 	background-color:#000000;
 	border:"0px";
 	padding:"0px";
 }
 div.header-cont2 
 {
-	width:100%;
-	position:fixed;
-	top:20px;
-	left:0px;
-	margin-left:0px;
+	width: 70%;
+	margin-left: 150px;
+	margin-top: 34px;
 	background-color:#435464;
 	border:"0px";
 	padding:"0px";
+}
+.footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:24px;
+   width:100%;
+   background:#000;
+}
+
+/* IE 6 */
+* html .footer {
+   position:absolute;
+   top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ?   document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
 }
 .stretch
 {
