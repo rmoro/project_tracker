@@ -16,12 +16,16 @@
   </div>
 </div>
 
-<div class="create" top="-300px">
+<div class="create" top="300px">
   <div class="container2">
    
     <%= form_for(@entry) do |form| %>  
  		 <div class="field"> 
-		<table border="0" >
+		<table border="0">
+			<tr>
+				<p align="left"><b>Description of Work:</b></p>
+			</tr>
+    		<tr><%= form.text_area :description %></tr>
 			<tr>
 				<td><b>Name: </b></td>
 				<td><%= form.text_field :name %></td>
@@ -29,9 +33,8 @@
 				<td><%= form.email_field :email %></td>
 			</tr>
 			<tr><td><b>Hours Worked: </b></td>
-				<td><%= form.number_field :hours, step: 0.25 %></td></tr>
-			<tr><b>Description of Work:</b></tr>
-    		<tr><%= form.text_area :description %> </tr>
+				<td><%= form.number_field :hours, step: 0.25, max: 12, min: 0 %></td>
+			</tr>
 		</table>
   		</div> 
   		<div class="actions" align="right"> 

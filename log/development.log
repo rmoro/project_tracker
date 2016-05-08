@@ -8823,3 +8823,380 @@ Processing by EntrysController#index as HTML
   [1m[35mEntry Load (0.2ms)[0m  SELECT "entries".* FROM "entries"
   Rendered entrys/index.html.erb within layouts/application (9.7ms)
 Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/entries" for ::1 at 2016-05-07 20:46:53 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EntrysController#index as HTML
+  [1m[35mEntry Load (0.2ms)[0m  SELECT "entries".* FROM "entries"
+  Rendered entrys/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 317ms (Views: 300.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/entries/new" for ::1 at 2016-05-07 20:46:58 -0400
+Processing by EntrysController#new as HTML
+  Rendered entrys/new.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/entries/new" for ::1 at 2016-05-07 20:49:28 -0400
+Processing by EntrysController#new as HTML
+  Rendered entrys/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 90ms (Views: 89.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/entrys.self-e2ee63a2971067d2f8d04315980a8f57354db5e789a062b6fa78861e72b9c226.css?body=1" for ::1 at 2016-05-07 20:49:28 -0400
+
+
+Started GET "/assets/welcome.self-88c55846d025e4e69deb27a530b82fc76f1403c1525794f37145a89a220794c5.css?body=1" for ::1 at 2016-05-07 20:49:28 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-07 20:49:28 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-07 20:49:28 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-07 20:49:28 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-07 20:49:28 -0400
+
+
+Started GET "/assets/entrys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-07 20:49:28 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-07 20:49:28 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-07 20:49:28 -0400
+
+
+Started GET "/entries/new" for ::1 at 2016-05-07 20:50:32 -0400
+Processing by EntrysController#new as HTML
+  Rendered entrys/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/entrys.self-e2ee63a2971067d2f8d04315980a8f57354db5e789a062b6fa78861e72b9c226.css?body=1" for ::1 at 2016-05-07 20:50:32 -0400
+
+
+Started GET "/assets/welcome.self-88c55846d025e4e69deb27a530b82fc76f1403c1525794f37145a89a220794c5.css?body=1" for ::1 at 2016-05-07 20:50:32 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-07 20:50:32 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-07 20:50:32 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-07 20:50:32 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-07 20:50:32 -0400
+
+
+Started GET "/assets/entrys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-07 20:50:32 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-07 20:50:32 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-07 20:50:32 -0400
+
+
+Started GET "/entries/new" for ::1 at 2016-05-07 20:51:46 -0400
+Processing by EntrysController#new as HTML
+  Rendered entrys/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/entrys.self-e2ee63a2971067d2f8d04315980a8f57354db5e789a062b6fa78861e72b9c226.css?body=1" for ::1 at 2016-05-07 20:51:46 -0400
+
+
+Started GET "/assets/welcome.self-88c55846d025e4e69deb27a530b82fc76f1403c1525794f37145a89a220794c5.css?body=1" for ::1 at 2016-05-07 20:51:46 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-07 20:51:46 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-07 20:51:46 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-07 20:51:46 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-07 20:51:46 -0400
+
+
+Started GET "/assets/entrys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-07 20:51:46 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-07 20:51:46 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-07 20:51:46 -0400
+
+
+Started GET "/entries/new" for ::1 at 2016-05-07 20:53:04 -0400
+Processing by EntrysController#new as HTML
+  Rendered entrys/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/entrys.self-e2ee63a2971067d2f8d04315980a8f57354db5e789a062b6fa78861e72b9c226.css?body=1" for ::1 at 2016-05-07 20:53:04 -0400
+
+
+Started GET "/assets/welcome.self-88c55846d025e4e69deb27a530b82fc76f1403c1525794f37145a89a220794c5.css?body=1" for ::1 at 2016-05-07 20:53:04 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-07 20:53:04 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-07 20:53:04 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-07 20:53:04 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-07 20:53:04 -0400
+
+
+Started GET "/assets/entrys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-07 20:53:04 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-07 20:53:04 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-07 20:53:04 -0400
+
+
+Started GET "/entries/new" for ::1 at 2016-05-07 20:54:08 -0400
+Processing by EntrysController#new as HTML
+  Rendered entrys/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/entrys.self-e2ee63a2971067d2f8d04315980a8f57354db5e789a062b6fa78861e72b9c226.css?body=1" for ::1 at 2016-05-07 20:54:09 -0400
+
+
+Started GET "/assets/welcome.self-88c55846d025e4e69deb27a530b82fc76f1403c1525794f37145a89a220794c5.css?body=1" for ::1 at 2016-05-07 20:54:09 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-07 20:54:09 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-07 20:54:09 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-07 20:54:09 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-07 20:54:09 -0400
+
+
+Started GET "/assets/entrys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-07 20:54:09 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-07 20:54:09 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-07 20:54:09 -0400
+
+
+Started GET "/entries/new" for ::1 at 2016-05-07 20:54:39 -0400
+Processing by EntrysController#new as HTML
+  Rendered entrys/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 89ms (Views: 88.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/entrys.self-e2ee63a2971067d2f8d04315980a8f57354db5e789a062b6fa78861e72b9c226.css?body=1" for ::1 at 2016-05-07 20:54:39 -0400
+
+
+Started GET "/assets/welcome.self-88c55846d025e4e69deb27a530b82fc76f1403c1525794f37145a89a220794c5.css?body=1" for ::1 at 2016-05-07 20:54:39 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-07 20:54:39 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-07 20:54:39 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-07 20:54:39 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-07 20:54:39 -0400
+
+
+Started GET "/assets/entrys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-07 20:54:39 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-07 20:54:39 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-07 20:54:39 -0400
+
+
+Started GET "/entries/new" for ::1 at 2016-05-07 20:58:10 -0400
+Processing by EntrysController#new as HTML
+  Rendered entrys/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/entrys.self-e2ee63a2971067d2f8d04315980a8f57354db5e789a062b6fa78861e72b9c226.css?body=1" for ::1 at 2016-05-07 20:58:10 -0400
+
+
+Started GET "/assets/welcome.self-88c55846d025e4e69deb27a530b82fc76f1403c1525794f37145a89a220794c5.css?body=1" for ::1 at 2016-05-07 20:58:10 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-07 20:58:10 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-07 20:58:10 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-07 20:58:10 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-07 20:58:10 -0400
+
+
+Started GET "/assets/entrys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-07 20:58:10 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-07 20:58:10 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-07 20:58:10 -0400
+
+
+Started GET "/entries/new" for ::1 at 2016-05-07 20:58:40 -0400
+Processing by EntrysController#new as HTML
+  Rendered entrys/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/entrys.self-e2ee63a2971067d2f8d04315980a8f57354db5e789a062b6fa78861e72b9c226.css?body=1" for ::1 at 2016-05-07 20:58:40 -0400
+
+
+Started GET "/assets/welcome.self-88c55846d025e4e69deb27a530b82fc76f1403c1525794f37145a89a220794c5.css?body=1" for ::1 at 2016-05-07 20:58:40 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-07 20:58:40 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-07 20:58:40 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-07 20:58:40 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-07 20:58:40 -0400
+
+
+Started GET "/assets/entrys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-07 20:58:40 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-07 20:58:40 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-07 20:58:40 -0400
+
+
+Started GET "/entries/new" for ::1 at 2016-05-07 20:59:37 -0400
+Processing by EntrysController#new as HTML
+  Rendered entrys/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/entrys.self-e2ee63a2971067d2f8d04315980a8f57354db5e789a062b6fa78861e72b9c226.css?body=1" for ::1 at 2016-05-07 20:59:37 -0400
+
+
+Started GET "/assets/welcome.self-88c55846d025e4e69deb27a530b82fc76f1403c1525794f37145a89a220794c5.css?body=1" for ::1 at 2016-05-07 20:59:37 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-07 20:59:37 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-07 20:59:37 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-07 20:59:37 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-07 20:59:37 -0400
+
+
+Started GET "/assets/entrys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-07 20:59:37 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-07 20:59:37 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-07 20:59:37 -0400
+
+
+Started GET "/entries/new" for ::1 at 2016-05-07 20:59:51 -0400
+Processing by EntrysController#new as HTML
+  Rendered entrys/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/entrys.self-e2ee63a2971067d2f8d04315980a8f57354db5e789a062b6fa78861e72b9c226.css?body=1" for ::1 at 2016-05-07 20:59:52 -0400
+
+
+Started GET "/assets/welcome.self-88c55846d025e4e69deb27a530b82fc76f1403c1525794f37145a89a220794c5.css?body=1" for ::1 at 2016-05-07 20:59:52 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-07 20:59:52 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-07 20:59:52 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-07 20:59:52 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-07 20:59:52 -0400
+
+
+Started GET "/assets/entrys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-07 20:59:52 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-07 20:59:52 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-07 20:59:52 -0400
+
+
+Started GET "/entries/new" for ::1 at 2016-05-07 21:01:01 -0400
+Processing by EntrysController#new as HTML
+  Rendered entrys/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 72ms (Views: 71.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/entrys.self-e2ee63a2971067d2f8d04315980a8f57354db5e789a062b6fa78861e72b9c226.css?body=1" for ::1 at 2016-05-07 21:01:01 -0400
+
+
+Started GET "/assets/welcome.self-88c55846d025e4e69deb27a530b82fc76f1403c1525794f37145a89a220794c5.css?body=1" for ::1 at 2016-05-07 21:01:01 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-07 21:01:01 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-07 21:01:01 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-07 21:01:01 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-07 21:01:01 -0400
+
+
+Started GET "/assets/entrys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-07 21:01:01 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-07 21:01:01 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-07 21:01:01 -0400
