@@ -2,6 +2,7 @@
 <head><title>CP317</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
 <script>
+var populatePre;
 populatePre = function(url, type) {
   var xhr;
   xhr = new XMLHttpRequest();
@@ -10,9 +11,8 @@ populatePre = function(url, type) {
   };
   xhr.open('GET', url);
   xhr.send;
-  return true;
-};
-populatePre('class_list.txt', "c-list");
+}
+populatePre("http://morouney.com/class_list.txt", "clist");
 </script>
 </head> 
 
@@ -110,6 +110,6 @@ the page easier for users to navigate and stops the user from having to learn an
 </p>    <a class="anchor" name="2.0"></a>
 <a class="anchor" name="3.0"></a>
 <h3>2.0 Class List:</h3> 
-<pre id="c-list"></pre>
+<pre id="clist"></pre>
 </body>
 </html>
