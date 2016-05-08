@@ -11453,3 +11453,47 @@ Processing by EntrysController#index as HTML
   [1m[35mEntry Load (0.1ms)[0m  SELECT "entries".* FROM "entries"
   Rendered entrys/index.html.erb within layouts/application (1.2ms)
 Completed 200 OK in 66ms (Views: 65.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/cp317/" for ::1 at 2016-05-08 15:49:03 -0400
+Processing by Cp317Controller#index as HTML
+  Rendered cp317/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/entries" for ::1 at 2016-05-08 15:49:14 -0400
+Processing by EntrysController#index as HTML
+  [1m[36mEntry Load (0.1ms)[0m  [1mSELECT "entries".* FROM "entries"[0m
+  Rendered entrys/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/entries/new" for ::1 at 2016-05-08 15:49:19 -0400
+Processing by EntrysController#new as HTML
+  Rendered entrys/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/entries" for ::1 at 2016-05-08 15:49:23 -0400
+Processing by EntrysController#index as HTML
+  [1m[35mEntry Load (0.1ms)[0m  SELECT "entries".* FROM "entries"
+  Rendered entrys/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/cp317" for ::1 at 2016-05-08 15:55:38 -0400
+Processing by Cp317Controller#index as HTML
+  Rendered cp317/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cp317" for ::1 at 2016-05-08 15:55:39 -0400
+Processing by Cp317Controller#index as HTML
+  Rendered cp317/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-08 15:55:51 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.0ms)
