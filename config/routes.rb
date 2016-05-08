@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'welcome#index'
-  get '/CP317' => 'welcome#index'
-  get '/cp317' => 'welcome#index'
+  get '/CP317' => 'cp317#index'
+  get '/cp317' => 'cp317#index'
   get '/entries' => 'entrys#index'
   get '/entries/new' => 'entrys#new'
   post 'entries' => 'entrys#create'
