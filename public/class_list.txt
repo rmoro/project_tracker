@@ -1,6 +1,9 @@
 Akhmad Sabri 		
     :: akhmadsabri@gmail.com	  
     :: research / requirements
+Aman Kumar
+    :: kuma6620@mylaurier.ca
+    ::
 Anders Lam 		    
     :: lamx7320@mylaurier.cai	  
     :: front end / design
