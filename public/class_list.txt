@@ -79,6 +79,9 @@ Muttahir Zia
 Omid Ghiyasian
     :: ghiy2250@mylaurier.ca
     :: design analysis debugging
+Phillip Lee
+    :: leex6220@mylaurier.ca
+    :: 
 Qamar Farooq
     :: ch.farooq.qamar@hotmail.com
     :: analysis / GUI
@@ -121,3 +124,8 @@ Wen Wu (Leroy)
 Yingjun Dai
     :: daix8340@mylaurier.ca
     :: HTML / database
+    
+    
+    
+    
+    
