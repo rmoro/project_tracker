@@ -13349,3 +13349,110 @@ Started GET "/cp317" for ::1 at 2016-05-08 17:07:42 -0400
 Processing by Cp317Controller#index as HTML
   Rendered cp317/index.html.erb within layouts/application (0.5ms)
 Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-08 17:22:31 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 303ms (Views: 285.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/entries/" for ::1 at 2016-05-08 17:22:33 -0400
+Processing by EntrysController#index as HTML
+  [1m[35mEntry Load (0.2ms)[0m  SELECT "entries".* FROM "entries"
+  Rendered entrys/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/entries/new" for ::1 at 2016-05-08 17:22:34 -0400
+Processing by EntrysController#new as HTML
+  Rendered entrys/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/entries" for ::1 at 2016-05-08 17:22:35 -0400
+Processing by EntrysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kmNIw/zdXMPSyS2yPfCTvTT60w3hBWDYpK+vKJzoHgvOUN03yGo5So3bFf6xKigqkWCiKOdEBJtZsJGV1dEGgg==", "entry"=>{"description"=>"", "name"=>"", "email"=>"", "hours"=>""}, "commit"=>"Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("name", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", ""], ["email", ""], ["description", ""], ["created_at", "2016-05-08 21:22:35.639848"], ["updated_at", "2016-05-08 21:22:35.639848"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/entries
+Completed 302 Found in 8ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/entries" for ::1 at 2016-05-08 17:22:35 -0400
+Processing by EntrysController#index as HTML
+  [1m[35mEntry Load (0.1ms)[0m  SELECT "entries".* FROM "entries"
+  Rendered entrys/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 66ms (Views: 65.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/cp317/" for ::1 at 2016-05-08 17:31:55 -0400
+Processing by Cp317Controller#index as HTML
+  Rendered cp317/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-11 13:14:07 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 342ms (Views: 324.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-11 13:14:07 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cp317" for ::1 at 2016-05-11 13:14:12 -0400
+Processing by Cp317Controller#index as HTML
+  Rendered cp317/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/entries" for ::1 at 2016-05-11 13:14:20 -0400
+Processing by EntrysController#index as HTML
+  [1m[35mEntry Load (0.2ms)[0m  SELECT "entries".* FROM "entries"
+  Rendered entrys/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 26ms (Views: 23.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cp317/" for ::1 at 2016-05-11 13:14:21 -0400
+Processing by Cp317Controller#index as HTML
+  Rendered cp317/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 74ms (Views: 73.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cp317" for ::1 at 2016-05-11 13:14:23 -0400
+Processing by Cp317Controller#index as HTML
+  Rendered cp317/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 16ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/entries" for ::1 at 2016-05-11 13:15:28 -0400
+Processing by EntrysController#index as HTML
+  [1m[36mEntry Load (0.2ms)[0m  [1mSELECT "entries".* FROM "entries"[0m
+  Rendered entrys/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cp317" for ::1 at 2016-05-11 13:15:31 -0400
+Processing by Cp317Controller#index as HTML
+  Rendered cp317/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/entries" for ::1 at 2016-05-11 13:15:49 -0400
+Processing by EntrysController#index as HTML
+  [1m[35mEntry Load (0.2ms)[0m  SELECT "entries".* FROM "entries"
+  Rendered entrys/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/cp317" for ::1 at 2016-05-11 13:15:51 -0400
+Processing by Cp317Controller#index as HTML
+  Rendered cp317/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms)
