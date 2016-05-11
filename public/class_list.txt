@@ -3,7 +3,11 @@ Akhmad Sabri
     :: research / requirements
 Aman Kumar
     :: kuma6620@mylaurier.ca
+<<<<<<< HEAD
     ::
+=======
+    :: 
+>>>>>>> 85e4f2cabe951ed7a3221334e128da1d867869cb
 Anders Lam 		    
     :: lamx7320@mylaurier.cai	  
     :: front end / design
