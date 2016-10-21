@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Website</title>
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
+  <script type="text/javascript">
+
+    var t1 = setInterval(myTimer, 10);
+    var score = 0;
+    var n = 0;
+    var scroll = dw_getScrollOffsets();
+    var sy = scroll.y;
+    var sflg = false;
+////////////////////////////////////////////////////////////////////////////
+    function coin_cross (sl,st,el, et) {
+      $bgimg = $(".bgimg");
+      var $coin = $('<div class="coin">')
+        .insertAfter($bgimg)
+          .css({
+            "left": sl,
+            "top": st,
+            "z-index": 500
+          })
+           .animate({
+            "top": et,
+            "left": el
+          }, 1000, function() {
+              $coin.remove(); score++;
+            });
+    }
+    var cflg = 0
+    function myTimer() {
+      n++;
+      var _ = text_size();
+      if (n >= 500)  {
+        n = 0;
+        score++;
+        sflg = false;
+
+      }
+      if (cflg > 0) {
+        if (cflg <= 25){
+          cflg++;
+          if (cflg % 5 == 0) {
+            var _ = coin_cross($(window).scrollLeft(),
+             $(window).scrollTop() + $(window).height(),
+             $(window).scrollLeft() + $(window).width(),
+             $(window).scrollTop());
+          }
+        } else {
+          cflg = 0;
+        }
+      }
+      scroll = dw_getScrollOffsets();
+      if (scroll.y > (sy + 500)) {
+        if (!sflg) {
+          cflg = 1
+        }
+        sy = scroll.y;
+        sflg = true;
+      }
+      document.getElementById("score").innerHTML = score.toString();
+    }
+////////////////////////////////////////////////////////////////////////////
+    function dw_getScrollOffsets() {
+      var doc = document, w = window;
+      var x, y, docEl;
+
+      if ( typeof w.pageYOffset === 'number' ) {
+          x = w.pageXOffset;
+          y = w.pageYOffset;
+      } else {
+          docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat')?
+                  doc.documentElement: doc.body;
+          x = docEl.scrollLeft;
+          y = docEl.scrollTop;
+      }
+      return {x:x, y:y};
+}
+////////////////////////////////////////////////////////////////////////////
+    function delay (URL) {
+      setTimeout( function() { window.location = URL }, 700 );
+    }
+////////////////////////////////////////////////////////////////////////////
+
+function text_size(){
+  var start_size = 95;
+  var stext = $('.score_text');
+  var len_txt = stext.html().length;
+  var new_size = start_size - (15 * (len_txt - 1))
+  stext.css("font-size",new_size)
+
+
+}
+
+////////////////////////////////////////////////////////////////////////////
+    $(window).load(function(){
+      $score_box = $(".score_box");
+      $("a").on("click", function(){
+          $link = $(this);
+
+          var $coin = $('<div class="coin">')
+            .insertAfter($link)
+              .css({
+                "left": $link.offset().left,
+                "top": $link.offset().top
+              })
+              .animate({
+                "top": $score_box.offset().top + 75,
+                "left": $score_box.offset().left + 50
+              }, 500, function() {
+                  $coin.remove();
+                  score++;
+                });
+          var href = $(this).attr('href');
+          setTimeout(function() {window.location = href}, 1000);
+          });
+    });
+///////////////////////////////////////////////////////////////////////////////
+  </script>
+  <style>
+  #bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+  }
+  body {
+    background-image: image(/bg.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    z-index: 1;
+    font-family: cursive;
+  }
+  a {
+    color: yellow;
+    font-style: normal;
+    font-family: monospace;
+  }
+  .score_box {
+    float: right;
+    height: 100pt;
+    width: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index:2;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.01);
+    overflow-x: hidden;
+  }
+  .score_text {
+    position: relative;
+    top: 4%;
+    width: 100%;
+    text-align: center;
+    font-size: 79;
+    font-style: oblique;
+    margin-left: auto;
+    margin-top: 10px;
+    font-family: 'Press Start 2P', cursive;
+    -webkit-font-smoothing : none;
+    color: rgba(0,255,0, 0.5);
+  }
+  .coin{
+      position:absolute;
+      width:20px;
+      height:20px;
+      border-radius:50%;
+      background-color:yellow;
+      border:1px dotted #333;
+      -webkit-animation:1s animateOpacity;
+  }
+  @-webkit-keyframes animateOpacity {
+      from {opacity: 0;}
+      5% {opacity: 0.6;}
+      50% {opacity: 1;}
+      95% {opacity: 0.6;}
+      to {opacity: 0;}
+  }
+  button {
+      margin:10px;
+  }
+  .blog_text {
+    color: white;
+    width: 50%;
+    margin-left: 25vw;
+    align: left;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 2vw;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0,0,0, 0.5);
+  }
+  </style>
+</head>
+<body>
+  <img src="bg.png" id="bg" alt="WTF" class="bgimg">
+  <div class="blog_text">
+    <p>Cras aliquam ligula nulla, et tempor tortor egestas et. Etiam eget congue justo, et ultrices enim. Praesent convallis finibus commodo. Donec mattis ullamcorper pretium. Vestibulum rhoncus hendrerit ultricies. Donec ultrices lorem enim, nec <a href="javascript:delay('#')">vulputate</a> orci consectetur ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum dignissim arcu <a href="javascript:delay('#')">vehicula</a> sollicitudin pellentesque. In consectetur sed metus sed egestas. Curabitur et tempus eros, vitae vehicula lorem. Nunc ultrices lacus at libero iaculis, vitae tempor leo laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos <a href="javascript:delay('#')">himenaeos.</a> Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis elementum lacinia tellus non tincidunt. Pellentesque vitae augue at tellus vestibulum lacinia.</p>
+
+    <p>Phasellus luctus velit nec mauris malesuada tincidunt. Suspendisse potenti. Cras quis sagittis diam. Maecenas at urna blandit lorem varius tincidunt vitae a felis. In vitae quam non libero malesuada hendrerit. Cras nec justo in orci porta vulputate in sed odio. Ut porttitor dapibus neque a lobortis. Duis sed auctor eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia <a href="javascript:delay('#')">Curae;</a> Nunc commodo justo quis magna mattis vulputate. Nam pharetra pharetra orci, vitae aliquet velit malesuada eget.</p>
+
+    <p>Vivamus ut justo tellus. Quisque a sem ornare, mollis orci eget, posuere leo. Phasellus fringilla tellus eros, sed facilisis velit rutrum non. Proin vitae dui risus. Maecenas libero dolor, ultrices posuere enim non, placerat dictum mauris. Ut at elementum enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; <a href="javascript:delay('#')">Nulla</a> faucibus tincidunt ex id dapibus. Mauris maximus elementum lectus at pharetra. Etiam ultricies id orci egestas gravida. Sed finibus orci quis fermentum tempus. Vivamus eu justo feugiat, sagittis magna sit amet, fermentum libero. In non lectus eu lacus placerat pulvinar.</p>
+    <p>Cras aliquam ligula nulla, et tempor tortor egestas et. Etiam eget congue justo, et ultrices enim. Praesent convallis finibus commodo. Donec mattis ullamcorper pretium. Vestibulum rhoncus hendrerit ultricies. Donec ultrices lorem enim, nec <a href="javascript:delay('#')">vulputate</a> orci consectetur ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum dignissim arcu <a href="javascript:delay('#')">vehicula</a> sollicitudin pellentesque. In consectetur sed metus sed egestas. Curabitur et tempus eros, vitae vehicula lorem. Nunc ultrices lacus at libero iaculis, vitae tempor leo laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos <a href="javascript:delay('#')">himenaeos.</a> Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis elementum lacinia tellus non tincidunt. Pellentesque vitae augue at tellus vestibulum lacinia.</p>
+
+    <p>Phasellus luctus velit nec mauris malesuada tincidunt. Suspendisse potenti. Cras quis sagittis diam. Maecenas at urna blandit lorem varius tincidunt vitae a felis. In vitae quam non libero malesuada hendrerit. Cras nec justo in orci porta vulputate in sed odio. Ut porttitor dapibus neque a lobortis. Duis sed auctor eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia <a href="javascript:delay('#')">Curae;</a> Nunc commodo justo quis magna mattis vulputate. Nam pharetra pharetra orci, vitae aliquet velit malesuada eget.</p>
+
+    <p>Vivamus ut justo tellus. Quisque a sem ornare, mollis orci eget, posuere leo. Phasellus fringilla tellus eros, sed facilisis velit rutrum non. Proin vitae dui risus. Maecenas libero dolor, ultrices posuere enim non, placerat dictum mauris. Ut at elementum enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; <a href="javascript:delay('#')">Nulla</a> faucibus tincidunt ex id dapibus. Mauris maximus elementum lectus at pharetra. Etiam ultricies id orci egestas gravida. Sed finibus orci quis fermentum tempus. Vivamus eu justo feugiat, sagittis magna sit amet, fermentum libero. In non lectus eu lacus placerat pulvinar.</p>
+    <p>Cras aliquam ligula nulla, et tempor tortor egestas et. Etiam eget congue justo, et ultrices enim. Praesent convallis finibus commodo. Donec mattis ullamcorper pretium. Vestibulum rhoncus hendrerit ultricies. Donec ultrices lorem enim, nec <a href="javascript:delay('#')">vulputate</a> orci consectetur ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum dignissim arcu <a href="javascript:delay('#')">vehicula</a> sollicitudin pellentesque. In consectetur sed metus sed egestas. Curabitur et tempus eros, vitae vehicula lorem. Nunc ultrices lacus at libero iaculis, vitae tempor leo laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos <a href="javascript:delay('#')">himenaeos.</a> Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis elementum lacinia tellus non tincidunt. Pellentesque vitae augue at tellus vestibulum lacinia.</p>
+
+    <p>Phasellus luctus velit nec mauris malesuada tincidunt. Suspendisse potenti. Cras quis sagittis diam. Maecenas at urna blandit lorem varius tincidunt vitae a felis. In vitae quam non libero malesuada hendrerit. Cras nec justo in orci porta vulputate in sed odio. Ut porttitor dapibus neque a lobortis. Duis sed auctor eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia <a href="javascript:delay('#')">Curae;</a> Nunc commodo justo quis magna mattis vulputate. Nam pharetra pharetra orci, vitae aliquet velit malesuada eget.</p>
+
+    <p>Vivamus ut justo tellus. Quisque a sem ornare, mollis orci eget, posuere leo. Phasellus fringilla tellus eros, sed facilisis velit rutrum non. Proin vitae dui risus. Maecenas libero dolor, ultrices posuere enim non, placerat dictum mauris. Ut at elementum enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; <a href="javascript:delay('#')">Nulla</a> faucibus tincidunt ex id dapibus. Mauris maximus elementum lectus at pharetra. Etiam ultricies id orci egestas gravida. Sed finibus orci quis fermentum tempus. Vivamus eu justo feugiat, sagittis magna sit amet, fermentum libero. In non lectus eu lacus placerat pulvinar.</p>
+    <br>
+    <br>
+    <br>
+  </div>
+
+  <div id="score_box" class="score_box">
+    <div id="score" class="score_text">
+      <!-- The score will be printed in here -->
+    </div>
+  </div>
+</body>
+
+</html>
