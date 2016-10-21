@@ -6,12 +6,24 @@
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
   <script type="text/javascript">
 
-    var t1 = setInterval(myTimer, 10);
+
     var score = 0;
     var n = 0;
     var scroll = dw_getScrollOffsets();
     var sy = scroll.y;
     var sflg = false;
+
+
+    // If the page is hidden, pause the video;
+    // if the page is shown, play the video
+    function handleVisibilityChange() {
+      if (document.hidden) {
+        clearTimeout(t1);
+      } else {
+        var t1 = setInterval(myTimer, 10);
+      }
+    }
+
 ////////////////////////////////////////////////////////////////////////////
     function coin_cross (sl,st,el, et) {
       $bgimg = $(".bgimg");
@@ -35,7 +47,7 @@
       var _ = text_size();
       if (n >= 500)  {
         n = 0;
-        score++;
+        if (document.hasFocus()){ score++;} else {score--;}
         sflg = false;
 
       }
