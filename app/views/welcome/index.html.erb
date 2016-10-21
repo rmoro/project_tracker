@@ -7,6 +7,24 @@
   var scroll = dw_getScrollOffsets();
   var sy = scroll.y;
   var sflg = false;
+
+
+////////////////////////////////////////////////////////////////////////////
+function dw_getScrollOffsets() {
+  var doc = document, w = window;
+  var x, y, docEl;
+
+  if ( typeof w.pageYOffset === 'number' ) {
+      x = w.pageXOffset;
+      y = w.pageYOffset;
+  } else {
+      docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat')?
+              doc.documentElement: doc.body;
+      x = docEl.scrollLeft;
+      y = docEl.scrollTop;
+  }
+  return {x:x, y:y};
+}
 ////////////////////////////////////////////////////////////////////////////
   function coin_cross (sl,st,el, et) {
     $bgimg = $(".bgimg");
@@ -58,22 +76,7 @@
     document.getElementById("score").innerHTML = score.toString();
   }
 ////////////////////////////////////////////////////////////////////////////
-  function dw_getScrollOffsets() {
-    var doc = document, w = window;
-    var x, y, docEl;
 
-    if ( typeof w.pageYOffset === 'number' ) {
-        x = w.pageXOffset;
-        y = w.pageYOffset;
-    } else {
-        docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat')?
-                doc.documentElement: doc.body;
-        x = docEl.scrollLeft;
-        y = docEl.scrollTop;
-    }
-    return {x:x, y:y};
-}
-////////////////////////////////////////////////////////////////////////////
   function delay (URL) {
     setTimeout( function() { window.location = URL }, 700 );
   }
