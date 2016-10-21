@@ -1,30 +1,14 @@
 <% @title = "MOROUNEY.COM :: Robert Morouney"%>
 <script type="text/javascript">
 
-  var t1 = setInterval(myTimer, 10);
-  var score = 0;
+  var score = parseInt(localStorage.getItem("score"));
+  if (score == NULL ) score = 0;
+
   var n = 0;
   var scroll = dw_getScrollOffsets();
   var sy = scroll.y;
   var sflg = false;
-
-
-////////////////////////////////////////////////////////////////////////////
-function dw_getScrollOffsets() {
-  var doc = document, w = window;
-  var x, y, docEl;
-
-  if ( typeof w.pageYOffset === 'number' ) {
-      x = w.pageXOffset;
-      y = w.pageYOffset;
-  } else {
-      docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat')?
-              doc.documentElement: doc.body;
-      x = docEl.scrollLeft;
-      y = docEl.scrollTop;
-  }
-  return {x:x, y:y};
-}
+  var t1 = setInterval(myTimer, 10);
 ////////////////////////////////////////////////////////////////////////////
   function coin_cross (sl,st,el, et) {
     $bgimg = $(".bgimg");
@@ -43,15 +27,25 @@ function dw_getScrollOffsets() {
           });
   }
   var cflg = 0
+  var m = 0
   function myTimer() {
     n++;
     var _ = text_size();
-    if (n >= 500)  {
-      n = 0;
-      score++;
-      sflg = false;
 
+    if (n >= 2500)  {
+      if(m==0){ score++; }
+      sflg = false;
+      n^=n;
     }
+
+    document.hasFocus() ? m^=m : m++;
+
+    if(m >= 3500) {
+      m = 1;
+      score--;
+      sflg = true;
+    }
+
     if (cflg > 0) {
       if (cflg <= 25){
         cflg++;
@@ -76,18 +70,34 @@ function dw_getScrollOffsets() {
     document.getElementById("score").innerHTML = score.toString();
   }
 ////////////////////////////////////////////////////////////////////////////
+  function dw_getScrollOffsets() {
+    var doc = document, w = window;
+    var x, y, docEl;
 
+    if ( typeof w.pageYOffset === 'number' ) {
+        x = w.pageXOffset;
+        y = w.pageYOffset;
+    } else {
+        docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat')?
+                doc.documentElement: doc.body;
+        x = docEl.scrollLeft;
+        y = docEl.scrollTop;
+    }
+    return {x:x, y:y};
+}
+////////////////////////////////////////////////////////////////////////////
   function delay (URL) {
+    localStorage.setItem("score", score);
     setTimeout( function() { window.location = URL }, 700 );
   }
 ////////////////////////////////////////////////////////////////////////////
 
-function text_size(){
-var start_size = 95;
-var stext = $('.score_text');
-var len_txt = stext.html().length;
-var new_size = start_size - (15 * (len_txt - 1))
-stext.css("font-size",new_size)
+  function text_size(){
+    var start_size = 95;
+    var stext = $('.score_text');
+    var len_txt = stext.html().length;
+    var new_size = start_size - (15 * (len_txt - 1))
+    stext.css("font-size",new_size)
 
 
 }
@@ -117,40 +127,40 @@ stext.css("font-size",new_size)
   });
 ///////////////////////////////////////////////////////////////////////////////
 </script>
-    <style>
-      div.t {
-        margin-left: 25vw;
-        margin-top: 10vh;
-        white-space: nowrap;
-        align: left;
-      };
-    </style>
-    <div class="t">
-      <a href="javascript:delay('mailto:robert@morouney.com')">
-        <pre>
-           ,-.
-       ,--' ~.).
-     ,'         `.
-    ; (((__   __)))
-    ;  ( (#) ( (#)
-    |   \_/___\_/|
-   ,"  ,-'    `__".
-  (   ( ._   ____`.)--._        _
-   `._ `-.`-' \(`-'  _  `-. _,-' `-/`.
-    ,')   `.`._))  ,' `.   `.  ,','  ;
-  .'  .     `--'  /     ).   `.      ;
- ;     `-        /     '  )         ;
- \                       ')       ,'
-  \                     ,'       ;
-   \               `~~~'       ,'
-    `.                      _,'
-      `.                ,--'
-        `-._________,--'       神鸭 (robert morouney)
-        </pre>
-      </a>
-    </div>
-    <div id="score_box" class="score_box">
-      <div id="score" class="score_text">
-        <!-- The score will be printed in here -->
-      </div>
-    </div>
+<style>
+  div.t {
+    margin-left: 25vw;
+    margin-top: 10vh;
+    white-space: nowrap;
+    align: left;
+  };
+</style>
+<div class="t">
+  <a href="javascript:delay('mailto:robert@morouney.com')">
+    <pre>
+       ,-.
+   ,--' ~.).
+ ,'         `.
+; (((__   __)))
+;  ( (#) ( (#)
+|   \_/___\_/|
+,"  ,-'    `__".
+(   ( ._   ____`.)--._        _
+`._ `-.`-' \(`-'  _  `-. _,-' `-/`.
+,')   `.`._))  ,' `.   `.  ,','  ;
+.'  .     `--'  /     ).   `.      ;
+;     `-        /     '  )         ;
+\                       ')       ,'
+\                     ,'       ;
+\               `~~~'       ,'
+`.                      _,'
+  `.                ,--'
+    `-._________,--'       神鸭 (robert morouney)
+    </pre>
+  </a>
+</div>
+<div id="score_box" class="score_box">
+  <div id="score" class="score_text">
+    <!-- The score will be printed in here -->
+  </div>
+</div>

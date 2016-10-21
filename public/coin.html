@@ -8,6 +8,8 @@
 
 
     var score = 0;
+
+
     var n = 0;
     var scroll = dw_getScrollOffsets();
     var sy = scroll.y;
@@ -33,18 +35,18 @@
     var cflg = 0
     var m = 0
     function myTimer() {
-      n++; m++
+      n++;
       var _ = text_size();
 
-      if (n >= 5000)  {
-        if(m==1){ score++; }
+      if (n >= 2500)  {
+        if(m==0){ score++; }
         sflg = false;
         n^=n;
       }
 
       document.hasFocus() ? m^=m : m++;
 
-      if(m >= 50000) {
+      if(m >= 3500) {
         m = 1;
         score--;
         sflg = true;
