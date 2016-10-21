@@ -1,4 +1,119 @@
 <% @title = "MOROUNEY.COM :: Robert Morouney"%>
+<script type="text/javascript">
+
+  var t1 = setInterval(myTimer, 10);
+  var score = 0;
+  var n = 0;
+  var scroll = dw_getScrollOffsets();
+  var sy = scroll.y;
+  var sflg = false;
+////////////////////////////////////////////////////////////////////////////
+  function coin_cross (sl,st,el, et) {
+    $bgimg = $(".bgimg");
+    var $coin = $('<div class="coin">')
+      .insertAfter($bgimg)
+        .css({
+          "left": sl,
+          "top": st,
+          "z-index": 500
+        })
+         .animate({
+          "top": et,
+          "left": el
+        }, 1000, function() {
+            $coin.remove(); score++;
+          });
+  }
+  var cflg = 0
+  function myTimer() {
+    n++;
+    var _ = text_size();
+    if (n >= 500)  {
+      n = 0;
+      score++;
+      sflg = false;
+
+    }
+    if (cflg > 0) {
+      if (cflg <= 25){
+        cflg++;
+        if (cflg % 5 == 0) {
+          var _ = coin_cross($(window).scrollLeft(),
+           $(window).scrollTop() + $(window).height(),
+           $(window).scrollLeft() + $(window).width(),
+           $(window).scrollTop());
+        }
+      } else {
+        cflg = 0;
+      }
+    }
+    scroll = dw_getScrollOffsets();
+    if (scroll.y > (sy + 500)) {
+      if (!sflg) {
+        cflg = 1
+      }
+      sy = scroll.y;
+      sflg = true;
+    }
+    document.getElementById("score").innerHTML = score.toString();
+  }
+////////////////////////////////////////////////////////////////////////////
+  function dw_getScrollOffsets() {
+    var doc = document, w = window;
+    var x, y, docEl;
+
+    if ( typeof w.pageYOffset === 'number' ) {
+        x = w.pageXOffset;
+        y = w.pageYOffset;
+    } else {
+        docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat')?
+                doc.documentElement: doc.body;
+        x = docEl.scrollLeft;
+        y = docEl.scrollTop;
+    }
+    return {x:x, y:y};
+}
+////////////////////////////////////////////////////////////////////////////
+  function delay (URL) {
+    setTimeout( function() { window.location = URL }, 700 );
+  }
+////////////////////////////////////////////////////////////////////////////
+
+function text_size(){
+var start_size = 95;
+var stext = $('.score_text');
+var len_txt = stext.html().length;
+var new_size = start_size - (15 * (len_txt - 1))
+stext.css("font-size",new_size)
+
+
+}
+
+////////////////////////////////////////////////////////////////////////////
+  $(window).load(function(){
+    $score_box = $(".score_box");
+    $("a").on("click", function(){
+        $link = $(this);
+
+        var $coin = $('<div class="coin">')
+          .insertAfter($link)
+            .css({
+              "left": $link.offset().left,
+              "top": $link.offset().top
+            })
+            .animate({
+              "top": $score_box.offset().top + 75,
+              "left": $score_box.offset().left + 50
+            }, 500, function() {
+                $coin.remove();
+                score++;
+              });
+        var href = $(this).attr('href');
+        setTimeout(function() {window.location = href}, 1000);
+        });
+  });
+///////////////////////////////////////////////////////////////////////////////
+</script>
     <style>
       div.t {
         margin-left: 25vw;
