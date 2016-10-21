@@ -6,16 +6,18 @@
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
   <script type="text/javascript">
 
-
-    var score = 0;
-
+    var score = localStorage.getItem("score");
+    (score == null ) ? score = 0 : score = parseInt(score);
 
     var n = 0;
     var scroll = dw_getScrollOffsets();
-    var sy = scroll.y;
+
+    var sy = localStorage.getItem("sy");
+    (sy == null ) ? sy = scroll.y : sy = parseInt(sy);
+
     var sflg = false;
     var t1 = setInterval(myTimer, 10);
-////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////
     function coin_cross (sl,st,el, et) {
       $bgimg = $(".bgimg");
       var $coin = $('<div class="coin">')
@@ -28,8 +30,9 @@
            .animate({
             "top": et,
             "left": el
-          }, 1000, function() {
+          }, 700, function() {
               $coin.remove(); score++;
+              localStorage.setItem("score", score);
             });
     }
     var cflg = 0
@@ -40,6 +43,7 @@
 
       if (n >= 2500)  {
         if(m==0){ score++; }
+        localStorage.setItem("score", score);
         sflg = false;
         n^=n;
       }
@@ -71,11 +75,12 @@
           cflg = 1
         }
         sy = scroll.y;
+        localStorage.setItem("sy", sy);
         sflg = true;
       }
       document.getElementById("score").innerHTML = score.toString();
     }
-////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////
     function dw_getScrollOffsets() {
       var doc = document, w = window;
       var x, y, docEl;
@@ -90,47 +95,34 @@
           y = docEl.scrollTop;
       }
       return {x:x, y:y};
-}
-////////////////////////////////////////////////////////////////////////////
+  }
+  ////////////////////////////////////////////////////////////////////////////
     function delay (URL) {
-      setTimeout( function() { window.location = URL }, 700 );
+      setTimeout( function() { window.location = URL }, 1000 );
     }
-////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////
 
-function text_size(){
-  var start_size = 95;
-  var stext = $('.score_text');
-  var len_txt = stext.html().length;
-  var new_size = start_size - (15 * (len_txt - 1))
-  stext.css("font-size",new_size)
+    function text_size(){
+      var start_size = 95;
+      var stext = $('.score_text');
+      var len_txt = stext.html().length;
+      var new_size = start_size - (15 * (len_txt - 1))
+      stext.css("font-size",new_size)
 
 
-}
+  }
 
-////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////
     $(window).load(function(){
       $score_box = $(".score_box");
       $("a").on("click", function(){
           $link = $(this);
-
-          var $coin = $('<div class="coin">')
-            .insertAfter($link)
-              .css({
-                "left": $link.offset().left,
-                "top": $link.offset().top
-              })
-              .animate({
-                "top": $score_box.offset().top + 75,
-                "left": $score_box.offset().left + 50
-              }, 500, function() {
-                  $coin.remove();
-                  score++;
-                });
+          var _ = coin_cross ($link.offset().left,$link.offset().top,$score_box.offset().left + 50, $score_box.offset().top + 75)
           var href = $(this).attr('href');
           setTimeout(function() {window.location = href}, 1000);
           });
     });
-///////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////
   </script>
   <style>
   #bg {
