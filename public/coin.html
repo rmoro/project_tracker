@@ -36,13 +36,15 @@
       n++; m++
       var _ = text_size();
 
-      if (n >= 500)  {
-        if(m==0) score++;
+      if (n >= 5000)  {
+        if(m==1){ score++; }
         sflg = false;
+        n^=n;
       }
-      document.hasFocus() ? m^=m; : m++;
 
-      if(m >= 5000) {
+      document.hasFocus() ? m^=m : m++;
+
+      if(m >= 50000) {
         m = 1;
         score--;
         sflg = true;
