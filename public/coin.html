@@ -31,15 +31,23 @@
             });
     }
     var cflg = 0
+    var m = 0
     function myTimer() {
-      n++;
+      n++; m++
       var _ = text_size();
-      if (n >= 500)  {
-        n = 0;
-        if (document.hasFocus()){ score++;} else {score--;}
-        sflg = false;
 
+      if (n >= 500)  {
+        if(m==0) score++;
+        sflg = false;
       }
+      document.hasFocus() ? m^=m; : m++;
+
+      if(m >= 5000) {
+        m = 1;
+        score--;
+        sflg = true;
+      }
+
       if (cflg > 0) {
         if (cflg <= 25){
           cflg++;
