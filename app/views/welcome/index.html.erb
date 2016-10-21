@@ -64,6 +64,7 @@
       } else {
         cflg = 0;
       }
+    }
     ///////////////////////////////////////
     scroll = dw_getScrollOffsets();
     if (scroll.y > (sy + 500)) {
@@ -101,8 +102,8 @@
     var start_size = 95;
     var stext = $('.score_text');
     var len_txt = stext.html().length;
-    var new_size = start_size - (15 * (len_txt - 1))
-    stext.css("font-size",new_size)
+    var new_size = start_size - (15 * (len_txt - 1));
+    stext.css("font-size",new_size);
   }
 ////////////////////////////////////////////////////////////////////////////
   $(window).load(function(){
