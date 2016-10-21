@@ -12,12 +12,12 @@ a:link, a:visited
 	display: inline-block;
 }
 
-a:hover, a:active 
+a:hover, a:active
 {
 	color: #dedc72
 }
 
-h1 
+h1
 {
 	color: #dedc72;
 	font-size:18px;
@@ -25,7 +25,7 @@ h1
 	font-family: Impact, Charcoal, sans-serif;
 }
 
-h3 
+h3
 {
 	color: #dedc72;
 	font-size:28px;
@@ -37,7 +37,7 @@ h3
 	font-size:24px;
 	padding: 0px;
 }
-body 
+body
 {
 	background: #435464;
 	text-align: justify;
@@ -48,13 +48,13 @@ body
 }
 
 
-.divtext 
+.divtext
 {
     word-wrap: break-word;
 	width: 70%;
 	margin-top: 10px;
 	margin-left: 150px;
-}	
+}
 
 .title
 {
@@ -65,7 +65,7 @@ body
     margin-top:0px;
 }
 
-pre 
+pre
 {
 	display: inline-block;
 	white-space: -moz-pre-wrap; /* Firefox */
@@ -74,7 +74,7 @@ pre
 	white-space: pre-wrap; /* Chrome; W3C standard */
 	word-wrap: break-word; /* IE */
 }
-div.header-cont 
+div.header-cont
 {
 	width: 100%;
 	margin-left: 0px;
@@ -84,7 +84,7 @@ div.header-cont
 	border:"0px";
 	padding:"0px";
 }
-div.header-cont2 
+div.header-cont2
 {
 	width: 70%;
 	margin-left: 150px;
@@ -122,4 +122,70 @@ a.anchor {
     position: relative;
     top: -290px;
     visibility: hidden;
+}
+
+#bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+
+	/* Preserve aspet ratio */
+	min-width: 100%;
+	min-height: 100%;
+}
+.score_box {
+	float: right;
+	height: 100pt;
+	width: auto;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index:2;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(255, 255, 255, 0.01);
+	overflow-x: hidden;
+}
+.score_text {
+	position: relative;
+	top: 4%;
+	width: 100%;
+	text-align: center;
+	font-size: 79;
+	font-style: oblique;
+	margin-left: auto;
+	margin-top: 10px;
+	font-family: 'Press Start 2P', cursive;
+	-webkit-font-smoothing : none;
+	color: rgba(0,255,0, 0.5);
+}
+.coin{
+		position:absolute;
+		width:20px;
+		height:20px;
+		border-radius:50%;
+		background-color:yellow;
+		border:1px dotted #333;
+		-webkit-animation:1s animateOpacity;
+}
+@-webkit-keyframes animateOpacity {
+		from {opacity: 0;}
+		5% {opacity: 0.6;}
+		50% {opacity: 1;}
+		95% {opacity: 0.6;}
+		to {opacity: 0;}
+}
+button {
+		margin:10px;
+}
+.blog_text {
+	color: white;
+	width: 50%;
+	margin-left: 25vw;
+	align: left;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	padding-top: 2vw;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0,0,0, 0.5);
 }
