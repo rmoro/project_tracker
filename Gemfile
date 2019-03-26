@@ -1,5 +1,24 @@
 source 'https://rubygems.org'
 
+gem "activerecord", ">= 4.2.7.1"
+
+gem "actionpack", ">= 4.2.5.2"
+
+gem "actionview", ">= 4.2.11.1"
+
+gem "activemodel", ">= 4.2.5.1"
+
+gem "loofah", ">= 2.2.3"
+
+gem "rails-html-sanitizer", ">= 1.0.4"
+
+gem "rack", ">= 1.6.11"
+
+gem "activejob", ">= 4.2.11"
+
+gem "nokogiri", ">= 1.8.5"
+
+
 gem 'unicorn'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
